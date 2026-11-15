@@ -36,13 +36,13 @@
                 <a href="#about" class="hover:text-accentGreen transition">About</a>
                 <a href="#education" class="hover:text-accentGreen transition">Education</a>
                 <a href="#skills" class="hover:text-accentGreen transition">Skills</a>
-                <a href="#admin-panel" class="hover:text-accentGreen transition">Chief Admin</a>
+                <a href="#admin-panel" class="hover:text-accentGreen transition text-accentGreen font-bold">Chief Admin Panel</a>
                 <a href="#projects" class="hover:text-accentGreen transition">Projects</a>
                 <a href="#contact" class="hover:text-accentGreen transition">Contact</a>
             </nav>
             <div class="flex items-center space-x-3">
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-accentGreen border border-emerald-500/20">
-                    <span class="w-2 h-2 mr-2 bg-accentGreen rounded-full animate-pulse"></span> Chief Admin Online
+                    <span class="w-2 h-2 mr-2 bg-accentGreen rounded-full animate-pulse"></span> Chief Admin Active
                 </span>
             </div>
         </div>
@@ -53,28 +53,29 @@
         <div class="md:w-2/3 space-y-6">
             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-slate-800/60 border border-slate-700 text-xs font-mono text-slate-300">
                 <span>System Role:</span>
-                <span class="text-accentGreen font-bold">Chief Administrator & Software Architect</span>
+                <span class="text-accentGreen font-bold">Chief Administrator & Software Developer</span>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
                 Hi, I'm <span class="text-accentGreen">Kevin Masita Oeba</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl">
-                Computer Science student specializing in Big Data Analytics at Kisii University. Independent software developer and technical analyst crafting robust backend systems, databases, and high-performance applications under the <span class="text-white font-mono">vohkemasi</span> brand.
+                Computer Science student specializing in Big Data Analytics at Kisii University. Independent software engineer and technical specialist crafting robust backend systems, databases, and high-performance applications under the <span class="text-white font-mono">vohkemasi</span> brand.
             </p>
             <div class="flex flex-wrap gap-4 pt-4">
                 <a href="#projects" class="px-6 py-3 rounded-lg bg-accentGreen text-slate-950 font-semibold hover:bg-emerald-400 transition shadow-lg shadow-emerald-900/20">
                     Explore Projects
                 </a>
-                <a href="#contact" class="px-6 py-3 rounded-lg bg-slate-800 text-white font-semibold border border-slate-700 hover:bg-slate-700 transition">
-                    Send Inquiry
+                <a href="#admin-panel" class="px-6 py-3 rounded-lg bg-slate-800 text-accentGreen font-semibold border border-emerald-500/30 hover:bg-slate-700 transition">
+                    ⚙️ Admin Control Panel
                 </a>
             </div>
         </div>
         <div class="mt-12 md:mt-0 md:w-1/3 flex justify-center">
             <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 p-1 border border-slate-800 shadow-2xl">
-                <div class="w-full h-full bg-cardBg rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4">
-                    <div class="w-20 h-20 rounded-full bg-accentGreen/10 flex items-center text-accentGreen justify-center font-mono text-2xl font-bold border border-accentGreen/30">
-                        KM
+                <div class="w-full h-full bg-cardBg rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+                    <div id="profile-avatar-container" class="w-20 h-20 rounded-full bg-accentGreen/10 flex items-center text-accentGreen justify-center font-mono text-2xl font-bold border border-accentGreen/30 overflow-hidden shadow-inner">
+                        <img id="profile-img-tag" src="" alt="Profile Avatar" class="w-full h-full object-cover hidden">
+                        <span id="profile-initials">KM</span>
                     </div>
                     <div>
                         <h3 class="font-bold text-lg text-white">Kevin Masita Oeba</h3>
@@ -82,6 +83,61 @@
                     </div>
                     <span class="text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">Kisii, Kenya</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHIEF ADMINISTRATOR LIVE CONTROL PANEL -->
+    <section id="admin-panel" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
+        <div class="bg-cardBg rounded-2xl p-8 border-2 border-accentGreen/40 relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accentGreen/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-3 bg-accentGreen/20 rounded-xl text-accentGreen border border-accentGreen/30">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Chief Administrator Live Control Panel</h2>
+                    <p class="text-xs font-mono text-accentGreen">Make live updates to profile image, skills matrix, and incoming projects.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <!-- 1. Update Profile Picture -->
+                <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4">
+                    <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">1. Update Profile Avatar</h3>
+                    <p class="text-xs text-slate-400">Paste a direct image URL (e.g. GitHub avatar link) to instantly update your photo.</p>
+                    <input type="text" id="admin-avatar-url" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="https://example.com/photo.jpg">
+                    <button onclick="updateProfilePic()" class="w-full py-2 bg-accentGreen text-slate-950 font-bold text-xs rounded-lg hover:bg-emerald-400 transition">Update Avatar</button>
+                </div>
+
+                <!-- 2. Add New Skill -->
+                <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4">
+                    <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">2. Add Skill</h3>
+                    <p class="text-xs text-slate-400">Add a new technical competency to your live skills matrix.</p>
+                    <select id="admin-skill-category" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen">
+                        <option value="Languages">Languages</option>
+                        <option value="Backend & Web">Backend & Web</option>
+                        <option value="Data & Databases">Data & Databases</option>
+                        <option value="Tools & DevOps">Tools & DevOps</option>
+                    </select>
+                    <input type="text" id="admin-skill-name" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Skill Name (e.g. Docker)">
+                    <button onclick="addNewSkill()" class="w-full py-2 bg-accentGreen text-slate-950 font-bold text-xs rounded-lg hover:bg-emerald-400 transition">Add Skill Live</button>
+                </div>
+
+                <!-- 3. Add Incoming Project -->
+                <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4">
+                    <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">3. Add Incoming Project</h3>
+                    <p class="text-xs text-slate-400">Publish a new upcoming project or architecture build.</p>
+                    <input type="text" id="admin-proj-title" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Project Title">
+                    <input type="text" id="admin-proj-tech" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Tech Stack (e.g. Node.js / Socket.io)">
+                    <textarea id="admin-proj-desc" rows="2" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Short description..."></textarea>
+                    <button onclick="addIncomingProject()" class="w-full py-2 bg-accentGreen text-slate-950 font-bold text-xs rounded-lg hover:bg-emerald-400 transition">Publish Project</button>
+                </div>
+            </div>
+            <div class="mt-6 flex justify-between items-center text-xs font-mono text-slate-500 border-t border-slate-800 pt-4">
+                <span>Storage: Browser LocalStorage (Persists across reloads)</span>
+                <button onclick="resetAdminData()" class="text-red-400 hover:underline">Reset to Default State</button>
             </div>
         </div>
     </section>
@@ -106,99 +162,27 @@
         </div>
     </section>
 
-    <!-- Technical Skills Matrix Section -->
+    <!-- Technical Skills Matrix Section (Dynamic via JS) -->
     <section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
-        <h2 class="text-3xl font-bold text-white mb-2">Technical Skills & Expertise</h2>
-        <p class="text-slate-400 mb-10">Core languages, frameworks, databases, and development tooling.</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Programming Languages -->
-            <div class="bg-cardBg rounded-xl p-6 border border-slate-800">
-                <h3 class="font-mono text-accentGreen text-sm font-bold mb-4 uppercase tracking-wider">Languages</h3>
-                <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Java</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Python</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>C & C++</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>JavaScript (ES6+)</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>HTML5 / CSS3</li>
-                </ul>
-            </div>
-
-            <!-- Frameworks & Backend -->
-            <div class="bg-cardBg rounded-xl p-6 border border-slate-800">
-                <h3 class="font-mono text-accentGreen text-sm font-bold mb-4 uppercase tracking-wider">Backend & Web</h3>
-                <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Spring Boot</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Node.js & Express</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Thymeleaf Templates</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Tailwind CSS</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Maven & Build Tools</li>
-                </ul>
-            </div>
-
-            <!-- Databases & Data Science -->
-            <div class="bg-cardBg rounded-xl p-6 border border-slate-800">
-                <h3 class="font-mono text-accentGreen text-sm font-bold mb-4 uppercase tracking-wider">Data & Databases</h3>
-                <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>MySQL & MariaDB</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>MongoDB</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Pandas & NumPy</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Matplotlib & Seaborn</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Spring Data JPA</li>
-                </ul>
-            </div>
-
-            <!-- Tools & Workflow -->
-            <div class="bg-cardBg rounded-xl p-6 border border-slate-800">
-                <h3 class="font-mono text-accentGreen text-sm font-bold mb-4 uppercase tracking-wider">Tools & DevOps</h3>
-                <ul class="space-y-2 text-sm text-slate-300 font-mono">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Git & GitHub Pages</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>VS Code Ecosystem</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Spring Tool Suite</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Hardware Troubleshooting</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>Network Security (WISP)</li>
-                </ul>
+        <div class="flex justify-between items-end mb-10">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-2">Technical Skills & Expertise</h2>
+                <p class="text-slate-400">Complete skill set including languages, frameworks, databases, and engineering tools.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Chief Administrator Privilege Section -->
-    <section id="admin-panel" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
-        <div class="bg-cardBg rounded-2xl p-8 border border-slate-800 relative overflow-hidden shadow-xl">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-accentGreen/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="flex items-center space-x-3 mb-6">
-                <div class="p-2 bg-accentGreen/10 rounded-lg text-accentGreen border border-accentGreen/20">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                </div>
-                <h2 class="text-2xl font-bold text-white">Chief Administrator Control Panel</h2>
-            </div>
-            <p class="text-slate-400 mb-6 max-w-3xl">
-                As the designated Chief Administrator of this infrastructure, I maintain full system control, manage secure backend workflows, deploy updates directly via VS Code and GitHub Pages, and oversee data engineering architecture.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-sm">
-                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block text-xs">SECURITY LEVEL</span>
-                    <span class="text-accentGreen font-bold text-base mt-1 block">Level 0 (Root Admin)</span>
-                </div>
-                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block text-xs">DEPLOYMENT TARGET</span>
-                    <span class="text-white font-bold text-base mt-1 block">GitHub Pages (`master`)</span>
-                </div>
-                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                    <span class="text-slate-500 block text-xs">SYSTEM STATUS</span>
-                    <span class="text-emerald-400 font-bold text-base mt-1 block">Active & Synchronized</span>
-                </div>
-            </div>
+        
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Dynamically populated by JS to allow adding/deleting skills live -->
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
-        <h2 class="text-3xl font-bold text-white mb-2">Featured Projects</h2>
-        <p class="text-slate-400 mb-10">Core applications and system architectures built under the vohkemasi brand.</p>
+        <h2 class="text-3xl font-bold text-white mb-2">Projects & Incoming Builds</h2>
+        <p class="text-slate-400 mb-10">Completed systems and incoming architectures built under the vohkemasi brand.</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Project 1 -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1: Bookstore CRUD -->
             <div class="bg-cardBg rounded-xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
                 <div>
                     <div class="flex justify-between items-start mb-4">
@@ -214,7 +198,7 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Predictive Sales -->
             <div class="bg-cardBg rounded-xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
                 <div>
                     <div class="flex justify-between items-start mb-4">
@@ -230,15 +214,49 @@
                 </div>
             </div>
         </div>
+
+        <!-- Container for dynamically added incoming projects -->
+        <div id="dynamic-projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"></div>
     </section>
 
-    <!-- Fully Functional Contact Inquiry Section -->
+    <!-- Contact & Inquiry Section -->
     <section id="contact" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
-        <div class="max-w-2xl mx-auto bg-cardBg rounded-2xl p-8 border border-slate-800 shadow-xl">
-            <h2 class="text-2xl font-bold text-white mb-2 text-center">Send an Inquiry</h2>
-            <p class="text-slate-400 text-sm text-center mb-8">Reach out directly to Chief Administrator Kevin Masita Oeba for technical projects or data analytics inquiries.</p>
+        <div class="max-w-3xl mx-auto bg-cardBg rounded-2xl p-8 border border-slate-800 shadow-xl">
+            <h2 class="text-2xl font-bold text-white mb-2 text-center">Direct Contact & Inquiries</h2>
+            <p class="text-slate-400 text-sm text-center mb-8">Reach out directly to Chief Administrator Kevin Masita Oeba via call, WhatsApp, email, or the inquiry form.</p>
             
-            <form id="contact-form" class="space-y-6">
+            <!-- Direct Phone, WhatsApp & Email Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <!-- Phone Card -->
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-slate-500 block">PHONE CALL</span>
+                        <a href="tel:0720021549" class="text-sm font-mono text-accentGreen hover:underline font-bold">0720021549</a>
+                    </div>
+                    <a href="tel:0720021549" class="mt-3 text-center py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Call Now</a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-slate-500 block">OFFICIAL EMAIL</span>
+                        <a id="email-text" href="mailto:kevinoeba02@gmail.com" class="text-xs font-mono text-accentGreen hover:underline font-bold break-all">kevinoeba02@gmail.com</a>
+                    </div>
+                    <button type="button" onclick="copyEmail()" class="mt-3 py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Copy Email</button>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-slate-500 block">WHATSAPP CHAT</span>
+                        <a id="phone-text" href="https://wa.me/254720021549" target="_blank" class="text-sm font-mono text-accentGreen hover:underline font-bold">+254 720 021 549</a>
+                    </div>
+                    <a href="https://wa.me/254720021549" target="_blank" class="mt-3 text-center py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Open Chat</a>
+                </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <form id="contact-form" class="space-y-6 border-t border-slate-800/80 pt-8">
                 <div>
                     <label class="block text-xs font-mono text-slate-400 mb-2">YOUR NAME</label>
                     <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accentGreen transition" placeholder="e.g. John Doe">
@@ -267,23 +285,179 @@
         <p>© 2026 Kevin Masita Oeba (vohkemasi). All Rights Reserved. Chief Administrator.</p>
     </footer>
 
-    <!-- Client-side JavaScript for Functional Inquiry Handling -->
+    <!-- JavaScript for Live Admin State & Interactivity -->
     <script>
+        // Default Skills Dataset encompassing all user capabilities
+        const defaultSkills = {
+            "Languages": ["Java", "Python", "C & C++", "JavaScript (ES6+)", "HTML5 / CSS3"],
+            "Backend & Web": ["Spring Boot", "Node.js & Express", "Thymeleaf Templates", "Tailwind CSS", "Maven & Build Tools"],
+            "Data & Databases": ["MySQL & MariaDB", "MongoDB", "Pandas & NumPy", "Matplotlib & Seaborn", "Spring Data JPA"],
+            "Tools & DevOps": ["Git & GitHub Pages", "VS Code Ecosystem", "Spring Tool Suite", "Electronics Repair & Soldering", "WISP Network Security"]
+        };
+
+        // Initialize LocalStorage state if empty
+        if (!localStorage.getItem('vohkemasi_skills')) {
+            localStorage.setItem('vohkemasi_skills', JSON.stringify(defaultSkills));
+        }
+        if (!localStorage.getItem('vohkemasi_projects')) {
+            localStorage.setItem('vohkemasi_projects', JSON.stringify([]));
+        }
+
+        // Render Skills Matrix
+        function renderSkills() {
+            const skillsData = JSON.parse(localStorage.getItem('vohkemasi_skills'));
+            const container = document.getElementById('skills-grid');
+            container.innerHTML = '';
+
+            for (const [category, skillList] of Object.entries(skillsData)) {
+                let card = document.createElement('div');
+                card.className = 'bg-cardBg rounded-xl p-6 border border-slate-800 flex flex-col justify-between';
+                
+                let listHtml = `<h3 class="font-mono text-accentGreen text-sm font-bold mb-4 uppercase tracking-wider">${category}</h3><ul class="space-y-2 text-sm text-slate-300 font-mono mb-6">`;
+                
+                skillList.forEach((skill, index) => {
+                    listHtml += `<li class="flex items-center justify-between group">
+                        <span class="flex items-center"><span class="w-1.5 h-1.5 bg-accentGreen rounded-full mr-2"></span>${skill}</span>
+                        <button onclick="deleteSkill('${category}', ${index})" class="text-red-400 opacity-0 group-hover:opacity-100 text-xs hover:underline ml-2">delete</button>
+                    </li>`;
+                });
+                listHtml += `</ul>`;
+                card.innerHTML = listHtml;
+                container.appendChild(card);
+            }
+        }
+
+        // Add New Skill Live
+        function addNewSkill() {
+            const category = document.getElementById('admin-skill-category').value;
+            const skillName = document.getElementById('admin-skill-name').value.trim();
+            if (!skillName) return alert('Please enter a skill name.');
+
+            let skillsData = JSON.parse(localStorage.getItem('vohkemasi_skills'));
+            if (!skillsData[category]) skillsData[category] = [];
+            skillsData[category].push(skillName);
+            
+            localStorage.setItem('vohkemasi_skills', JSON.stringify(skillsData));
+            document.getElementById('admin-skill-name').value = '';
+            renderSkills();
+            alert('Skill added successfully!');
+        }
+
+        // Delete Skill Live
+        function deleteSkill(category, index) {
+            let skillsData = JSON.parse(localStorage.getItem('vohkemasi_skills'));
+            skillsData[category].splice(index, 1);
+            localStorage.setItem('vohkemasi_skills', JSON.stringify(skillsData));
+            renderSkills();
+        }
+
+        // Update Profile Picture Live
+        function updateProfilePic() {
+            const url = document.getElementById('admin-avatar-url').value.trim();
+            if (!url) return alert('Please enter a valid image URL.');
+            
+            localStorage.setItem('vohkemasi_avatar', url);
+            applyProfilePic(url);
+            document.getElementById('admin-avatar-url').value = '';
+            alert('Profile avatar updated successfully!');
+        }
+
+        function applyProfilePic(url) {
+            const imgTag = document.getElementById('profile-img-tag');
+            const initials = document.getElementById('profile-initials');
+            if (url) {
+                imgTag.src = url;
+                imgTag.classList.remove('hidden');
+                initials.classList.add('hidden');
+            }
+        }
+
+        // Add Incoming Project Live
+        function addIncomingProject() {
+            const title = document.getElementById('admin-proj-title').value.trim();
+            const tech = document.getElementById('admin-proj-tech').value.trim();
+            const desc = document.getElementById('admin-proj-desc').value.trim();
+
+            if (!title || !tech || !desc) return alert('Please fill out all project fields.');
+
+            let projects = JSON.parse(localStorage.getItem('vohkemasi_projects'));
+            projects.push({ title, tech, desc });
+            localStorage.setItem('vohkemasi_projects', JSON.stringify(projects));
+
+            document.getElementById('admin-proj-title').value = '';
+            document.getElementById('admin-proj-tech').value = '';
+            document.getElementById('admin-proj-desc').value = '';
+            renderProjects();
+            alert('Incoming project published successfully!');
+        }
+
+        // Render Dynamic Projects
+        function renderProjects() {
+            const projects = JSON.parse(localStorage.getItem('vohkemasi_projects'));
+            const container = document.getElementById('dynamic-projects-container');
+            container.innerHTML = '';
+
+            projects.forEach((proj, idx) => {
+                let card = document.createElement('div');
+                card.className = 'bg-cardBg rounded-xl p-6 border border-accentGreen/30 flex flex-col justify-between relative';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">${proj.title}</h3>
+                            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-accentGreen border border-emerald-500/20">Incoming Build</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">${proj.desc}</p>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
+                        <span>${proj.tech}</span>
+                        <button onclick="deleteProject(${idx})" class="text-red-400 hover:underline">Remove</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function deleteProject(idx) {
+            let projects = JSON.parse(localStorage.getItem('vohkemasi_projects'));
+            projects.splice(idx, 1);
+            localStorage.setItem('vohkemasi_projects', JSON.stringify(projects));
+            renderProjects();
+        }
+
+        // Reset Admin Data
+        function resetAdminData() {
+            if (confirm('Are you sure you want to reset all customized skills, projects, and avatar to default?')) {
+                localStorage.removeItem('vohkemasi_skills');
+                localStorage.removeItem('vohkemasi_projects');
+                localStorage.removeItem('vohkemasi_avatar');
+                location.reload();
+            }
+        }
+
+        // Copy Helpers & Inquiry Form Handler
+        function copyEmail() {
+            const email = document.getElementById('email-text').textContent.trim();
+            navigator.clipboard.writeText(email);
+            alert('Email copied to clipboard: ' + email);
+        }
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Show instant transmission success feedback
             const feedbackBox = document.getElementById('form-feedback');
             feedbackBox.classList.remove('hidden');
-            
-            // Reset form fields
             this.reset();
-            
-            // Hide feedback after 6 seconds
             setTimeout(() => {
                 feedbackBox.classList.add('hidden');
             }, 6000);
         });
+
+        // Run on page load
+        window.onload = function() {
+            renderSkills();
+            renderProjects();
+            const savedAvatar = localStorage.getItem('vohkemasi_avatar');
+            if (savedAvatar) applyProfilePic(savedAvatar);
+        };
     </script>
 </body>
 </html>
