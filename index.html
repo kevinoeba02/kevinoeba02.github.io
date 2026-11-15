@@ -36,13 +36,13 @@
                 <a href="#about" class="hover:text-accentGreen transition">About</a>
                 <a href="#education" class="hover:text-accentGreen transition">Education</a>
                 <a href="#skills" class="hover:text-accentGreen transition">Skills</a>
-                <a href="#admin-panel" class="hover:text-accentGreen transition text-accentGreen font-bold">Chief Admin Panel</a>
                 <a href="#projects" class="hover:text-accentGreen transition">Projects</a>
                 <a href="#contact" class="hover:text-accentGreen transition">Contact</a>
+                <button onclick="toggleAdminLogin()" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 text-accentGreen border border-emerald-500/30 hover:bg-slate-700 transition">🔒 Admin Portal</button>
             </nav>
             <div class="flex items-center space-x-3">
                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-accentGreen border border-emerald-500/20">
-                    <span class="w-2 h-2 mr-2 bg-accentGreen rounded-full animate-pulse"></span> Chief Admin Active
+                    <span class="w-2 h-2 mr-2 bg-accentGreen rounded-full animate-pulse"></span> Portfolio Live
                 </span>
             </div>
         </div>
@@ -65,9 +65,9 @@
                 <a href="#projects" class="px-6 py-3 rounded-lg bg-accentGreen text-slate-950 font-semibold hover:bg-emerald-400 transition shadow-lg shadow-emerald-900/20">
                     Explore Projects
                 </a>
-                <a href="#admin-panel" class="px-6 py-3 rounded-lg bg-slate-800 text-accentGreen font-semibold border border-emerald-500/30 hover:bg-slate-700 transition">
-                    ⚙️ Admin Control Panel
-                </a>
+                <button onclick="toggleAdminLogin()" class="px-6 py-3 rounded-lg bg-slate-800 text-accentGreen font-semibold border border-emerald-500/30 hover:bg-slate-700 transition">
+                    🔒 Chief Admin Login
+                </button>
             </div>
         </div>
         <div class="mt-12 md:mt-0 md:w-1/3 flex justify-center">
@@ -87,19 +87,22 @@
         </div>
     </section>
 
-    <!-- CHIEF ADMINISTRATOR LIVE CONTROL PANEL -->
-    <section id="admin-panel" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
+    <!-- SECURE CHIEF ADMINISTRATOR LIVE CONTROL PANEL (Hidden by Default) -->
+    <section id="admin-panel" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80 hidden">
         <div class="bg-cardBg rounded-2xl p-8 border-2 border-accentGreen/40 relative overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 w-96 h-96 bg-accentGreen/10 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div class="flex items-center space-x-3 mb-6">
-                <div class="p-3 bg-accentGreen/20 rounded-xl text-accentGreen border border-accentGreen/30">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center space-x-3">
+                    <div class="p-3 bg-accentGreen/20 rounded-xl text-accentGreen border border-accentGreen/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Chief Administrator Control Panel</h2>
+                        <p class="text-xs font-mono text-accentGreen">Secure Session Active. Make live updates below.</p>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Chief Administrator Live Control Panel</h2>
-                    <p class="text-xs font-mono text-accentGreen">Make live updates to profile picture, skills matrix, and incoming projects.</p>
-                </div>
+                <button onclick="lockAdminPanel()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-mono rounded-lg transition">🔒 Lock Admin</button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -108,7 +111,6 @@
                     <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">1. Update Profile Avatar</h3>
                     <p class="text-xs text-slate-400">Take a photo using your camera or choose an existing picture from your device gallery.</p>
                     
-                    <!-- Hidden file input for handling camera and gallery picks -->
                     <input type="file" id="profile-file-input" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
                     
                     <div class="grid grid-cols-2 gap-2 pt-2">
@@ -116,7 +118,7 @@
                             <span>📷 Take Photo</span>
                         </button>
                         <button onclick="triggerGalleryPick()" class="py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-lg border border-slate-700 transition flex items-center justify-center space-x-1">
-                            <span>🖼️ Choose Gallery</span>
+                            <span>🖼️ Gallery</span>
                         </button>
                     </div>
                 </div>
@@ -140,7 +142,7 @@
                     <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">3. Add Incoming Project</h3>
                     <p class="text-xs text-slate-400">Publish a new upcoming project or architecture build.</p>
                     <input type="text" id="admin-proj-title" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Project Title">
-                    <input type="text" id="admin-proj-tech" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Tech Stack (e.g. Node.js / Socket.io)">
+                    <input type="text" id="admin-proj-tech" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Tech Stack (e.g. Node.js)">
                     <textarea id="admin-proj-desc" rows="2" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Short description..."></textarea>
                     <button onclick="addIncomingProject()" class="w-full py-2 bg-accentGreen text-slate-950 font-bold text-xs rounded-lg hover:bg-emerald-400 transition">Publish Project</button>
                 </div>
@@ -182,7 +184,7 @@
         </div>
         
         <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Dynamically populated by JS to allow adding/deleting skills live -->
+            <!-- Dynamically populated by JS -->
         </div>
     </section>
 
@@ -295,9 +297,29 @@
         <p>© 2026 Kevin Masita Oeba (vohkemasi). All Rights Reserved. Chief Administrator.</p>
     </footer>
 
-    <!-- JavaScript for Camera/Gallery Uploads, Skills, Projects & Interactivity -->
+    <!-- JavaScript for Secure Admin Access & Functionality -->
     <script>
-        // Default Skills Dataset encompassing all user capabilities
+        // Default PIN for Chief Administrator (You can change "2026" to any PIN you prefer)
+        const ADMIN_PIN = "2026";
+
+        function toggleAdminLogin() {
+            const enteredPin = prompt("Enter Chief Administrator Security PIN:");
+            if (enteredPin === ADMIN_PIN) {
+                document.getElementById('admin-panel').classList.remove('hidden');
+                document.getElementById('admin-panel').scrollIntoView({ behavior: 'smooth' });
+                alert('Access Granted: Chief Administrator session active.');
+            } else if (enteredPin !== null) {
+                alert('Access Denied: Incorrect Security PIN.');
+            }
+        }
+
+        function lockAdminPanel() {
+            document.getElementById('admin-panel').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            alert('Admin panel locked and secured.');
+        }
+
+        // Default Skills Dataset
         const defaultSkills = {
             "Languages": ["Java", "Python", "C & C++", "JavaScript (ES6+)", "HTML5 / CSS3"],
             "Backend & Web": ["Spring Boot", "Node.js & Express", "Thymeleaf Templates", "Tailwind CSS", "Maven & Build Tools"],
@@ -305,7 +327,6 @@
             "Tools & DevOps": ["Git & GitHub Pages", "VS Code Ecosystem", "Spring Tool Suite", "Electronics Repair & Soldering", "WISP Network Security"]
         };
 
-        // Initialize LocalStorage state if empty
         if (!localStorage.getItem('vohkemasi_skills')) {
             localStorage.setItem('vohkemasi_skills', JSON.stringify(defaultSkills));
         }
@@ -313,7 +334,6 @@
             localStorage.setItem('vohkemasi_projects', JSON.stringify([]));
         }
 
-        // Render Skills Matrix
         function renderSkills() {
             const skillsData = JSON.parse(localStorage.getItem('vohkemasi_skills'));
             const container = document.getElementById('skills-grid');
@@ -337,7 +357,6 @@
             }
         }
 
-        // Add New Skill Live
         function addNewSkill() {
             const category = document.getElementById('admin-skill-category').value;
             const skillName = document.getElementById('admin-skill-name').value.trim();
@@ -353,7 +372,6 @@
             alert('Skill added successfully!');
         }
 
-        // Delete Skill Live
         function deleteSkill(category, index) {
             let skillsData = JSON.parse(localStorage.getItem('vohkemasi_skills'));
             skillsData[category].splice(index, 1);
@@ -361,16 +379,15 @@
             renderSkills();
         }
 
-        // Camera and Gallery Handlers for Profile Picture
         function triggerCameraCapture() {
             const fileInput = document.getElementById('profile-file-input');
-            fileInput.setAttribute('capture', 'environment'); // Opens device camera directly
+            fileInput.setAttribute('capture', 'environment');
             fileInput.click();
         }
 
         function triggerGalleryPick() {
             const fileInput = document.getElementById('profile-file-input');
-            fileInput.removeAttribute('capture'); // Opens file gallery/picker
+            fileInput.removeAttribute('capture');
             fileInput.click();
         }
 
@@ -398,7 +415,6 @@
             }
         }
 
-        // Add Incoming Project Live
         function addIncomingProject() {
             const title = document.getElementById('admin-proj-title').value.trim();
             const tech = document.getElementById('admin-proj-tech').value.trim();
@@ -417,7 +433,6 @@
             alert('Incoming project published successfully!');
         }
 
-        // Render Dynamic Projects
         function renderProjects() {
             const projects = JSON.parse(localStorage.getItem('vohkemasi_projects'));
             const container = document.getElementById('dynamic-projects-container');
@@ -450,7 +465,6 @@
             renderProjects();
         }
 
-        // Reset Admin Data
         function resetAdminData() {
             if (confirm('Are you sure you want to reset all customized skills, projects, and avatar to default?')) {
                 localStorage.removeItem('vohkemasi_skills');
@@ -460,7 +474,6 @@
             }
         }
 
-        // Copy Helpers & Inquiry Form Handler
         function copyEmail() {
             const email = document.getElementById('email-text').textContent.trim();
             navigator.clipboard.writeText(email);
@@ -477,7 +490,6 @@
             }, 6000);
         });
 
-        // Run on page load
         window.onload = function() {
             renderSkills();
             renderProjects();
