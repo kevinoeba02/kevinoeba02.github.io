@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Masita Oeba | vohkemasi — Computer Science, Python, AI & Digital Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #090d16;
+      color: #f3f4f6;
+    }
+    .grid-bg {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-slate-950 grid-bg">
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/80 bg-[#090d16]/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center font-mono font-bold text-slate-950 text-lg shadow-lg shadow-emerald-500/20">
+          V
+        </div>
+        <span class="font-display font-bold text-xl tracking-tight text-white">
+          vohke<span class="text-emerald-400">masi</span>
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition">Background & Certs</a>
+        <a href="#services" class="hover:text-emerald-400 transition">Freelance Services</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Systems Built</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold transition">
+          Hire Me
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-[#090d16] px-4 py-4 space-y-3">
+      <a href="#about" class="block py-2 text-slate-300 hover:text-emerald-400">Background & Certifications</a>
+      <a href="#services" class="block py-2 text-slate-300 hover:text-emerald-400">Freelance Services</a>
+      <a href="#skills" class="block py-2 text-slate-300 hover:text-emerald-400">Skills & Tech Stack</a>
+      <a href="#projects" class="block py-2 text-slate-300 hover:text-emerald-400">Systems Built</a>
+      <a href="#contact" class="block py-2 text-emerald-400 font-semibold">Hire Me / Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Open for Freelance Projects, Consulting & Technical Roles
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+          Kevin Masita Oeba
+        </h1>
+
+        <p class="text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 font-semibold">
+          Computer Science (Big Data Analytics) • Python & AI Systems Developer • Certified Digital Marketer • Graphic & 3D Designer
+        </p>
+
+        <p class="text-slate-400 leading-relaxed max-w-2xl">
+          Operating under <span class="text-white font-mono">vohkemasi</span>, I architect intelligent Python and AI solutions, automated network and healthcare inventory systems, data-driven digital marketing campaigns, and visual brand assets in Canva and Blender.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold transition shadow-lg shadow-emerald-500/20">
+            Explore Systems Built
+          </a>
+          <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-700 hover:border-emerald-400/60 bg-slate-900/60 text-white font-medium transition">
+            Hire Me for a Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Photo & Executive Card -->
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            </div>
+            <span class="font-mono text-xs text-slate-400">vohkemasi // profile</span>
+          </div>
+
+          <div class="p-6 space-y-5">
+            <!-- Profile Picture Container -->
+            <div class="flex items-center gap-4 pb-4 border-b border-slate-800/80">
+              <div class="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-emerald-400/80 shadow-lg shadow-emerald-500/10 shrink-0 bg-slate-800">
+                <img
+                  src="images/profile.jpg"
+                  alt="Kevin Masita Oeba"
+                  class="w-full h-full object-cover"
+                  onerror="this.onerror=null; this.src='https://placehold.co/200x200/111827/10b981?text=KMO';"
+                />
+              </div>
+              <div>
+                <h2 class="font-display font-bold text-lg text-white">Kevin Masita Oeba</h2>
+                <p class="font-mono text-xs text-emerald-400">@vohkemasi • Freelancer</p>
+                <p class="text-xs text-slate-400 mt-1">Kisii, Kenya • Available Worldwide</p>
+              </div>
+            </div>
+
+            <!-- Key Highlights -->
+            <div class="font-mono text-xs space-y-3 text-slate-300">
+              <div class="flex justify-between items-center py-1 border-b border-slate-800/60">
+                <span class="text-slate-400">Degree:</span>
+                <span class="text-white text-right">BSc. CS (Big Data Analytics)</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-800/60">
+                <span class="text-slate-400">Certification:</span>
+                <span class="text-cyan-300 text-right">HubSpot Digital Marketing</span>
+              </div>
+              <div>
+                <p class="text-slate-400 mb-2">Core Domains:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 bg-slate-800 rounded text-emerald-300">Python & AI</span>
+                  <span class="px-2 py-0.5 bg-slate-800 rounded text-cyan-300">Network & Health IT</span>
+                  <span class="px-2 py-0.5 bg-slate-800 rounded text-purple-300">Prompt Eng</span>
+                  <span class="px-2 py-0.5 bg-slate-800 rounded text-amber-300">Canva & Blender 3D</span>
+                  <span class="px-2 py-0.5 bg-slate-800 rounded text-rose-300">Digital Marketing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About, Education & Certifications Section -->
+  <section id="about" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-800/70">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-6 space-y-4">
+        <span class="font-mono text-xs uppercase tracking-wider text-emerald-400">01 // Professional Summary</span>
+        <h2 class="font-display text-3xl font-bold text-white">About Me</h2>
+        <p class="text-slate-300 leading-relaxed">
+          I am a multidisciplinary Computer Science practitioner specializing in <strong>Big Data Analytics</strong>, <strong>Python Software Development</strong>, and <strong>Applied AI Systems</strong>. I have designed and built real-world solutions spanning automated network monitoring, hospital asset and electronic inventory management, medical AI diagnostics, and computer vision motion awareness.
+        </p>
+        <p class="text-slate-400 leading-relaxed">
+          As an active <strong>freelancer</strong>, I partner with businesses, startups, and individuals to deliver end-to-end technical and creative work—combining software development, database architecture, <strong>HubSpot-certified Digital Marketing</strong>, <strong>AI Prompt Engineering</strong>, <strong>Canva Graphic Design</strong>, and <strong>Blender 3D Modeling</strong>.
+        </p>
+      </div>
+
+      <!-- Education & Certifications -->
+      <div class="lg:col-span-6 space-y-4">
+        <span class="font-mono text-xs uppercase tracking-wider text-cyan-400">02 // Education & Credentials</span>
+        <h2 class="font-display text-3xl font-bold text-white">Academic & Certifications</h2>
+
+        <div class="space-y-4">
+          <!-- Degree Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-2.5">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-bold text-white">BSc. in Computer Science</h3>
+                <p class="text-emerald-400 font-medium text-sm">Specialization: Big Data Analytics</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 font-mono text-xs shrink-0">
+                Kisii University
+              </span>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Coursework and applied research in statistical data modeling, Python software engineering, relational database design, computer networks, and artificial intelligence.
+            </p>
+          </div>
+
+          <!-- HubSpot Certification Card -->
+          <div class="glass-card p-6 rounded-2xl space-y-2.5">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-bold text-white">Digital Marketing Certification</h3>
+                <p class="text-cyan-400 font-medium text-sm">Inbound Strategy, SEO, Content & Analytics</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs shrink-0">
+                HubSpot Academy
+              </span>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Certified in audience growth strategy, search engine optimization (SEO), social media marketing, conversion optimization, and campaign performance reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Freelance Services / What I Offer -->
+  <section id="services" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-800/70">
+    <div class="max-w-2xl mb-12">
+      <span class="font-mono text-xs uppercase tracking-wider text-emerald-400">03 // Freelance & Consulting</span>
+      <h2 class="font-display text-3xl font-bold text-white mt-1">What I Can Offer</h2>
+      <p class="text-slate-400 mt-2">Available for remote freelance gigs, contract builds, system deployment, and digital growth projects.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          01
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Python, AI & Computer Vision</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Custom Python software, predictive data analytics (Pandas, Matplotlib, Seaborn), motion-detection systems, and domain-specific AI applications.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          02
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Enterprise & Web Systems</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Inventory management platforms, automated network monitoring tools, Spring Boot & Node.js web apps, SQL/NoSQL databases, and M-PESA integrations.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          03
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Digital Marketing & Growth</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          HubSpot-certified digital marketing campaigns, SEO content strategy, brand positioning, social media management, and conversion analytics.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          04
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">AI Prompt Engineering</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          High-precision prompt architectures, automated LLM workflows, AI content/code generation pipelines, and response quality evaluation.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          05
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Canva Graphic & Brand Design</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Logos, brand identity kits, marketing flyers, pitch decks, social media graphics, and clean visual branding designed in Canva.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl transition duration-300 hover:-translate-y-1">
+        <div class="w-11 h-11 rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center mb-4 font-mono font-bold text-lg">
+          06
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Blender 3D & Hardware IT</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          3D product models and scene renders in Blender, alongside network configuration, router security, and practical electronics diagnostics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical & Creative Skills Section -->
+  <section id="skills" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-800/70">
+    <div class="max-w-2xl mb-12">
+      <span class="font-mono text-xs uppercase tracking-wider text-cyan-400">04 // Complete Skill Matrix</span>
+      <h2 class="font-display text-3xl font-bold text-white mt-1">Technical, AI & Creative Skills</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <h3 class="font-display font-semibold text-white border-b border-slate-800 pb-2">Python, Data & AI</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-emerald-300 font-mono">Python</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Pandas</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Matplotlib</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Seaborn</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-cyan-300 font-mono">Computer Vision</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-purple-300 font-mono">AI Prompt Eng</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-purple-300 font-mono">Medical AI</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <h3 class="font-display font-semibold text-white border-b border-slate-800 pb-2">Software & Databases</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-cyan-300 font-mono">Java & Spring Boot</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-emerald-300 font-mono">Node.js & Express</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">C / C++</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-amber-300 font-mono">HTML / CSS / JS</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-cyan-300 font-mono">MySQL & MariaDB</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-purple-300 font-mono">MongoDB</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Git & Maven</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <h3 class="font-display font-semibold text-white border-b border-slate-800 pb-2">Design & 3D Modeling</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-amber-300 font-mono">Canva Graphic Design</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-orange-300 font-mono">Blender 3D</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-amber-300 font-mono">Brand Identity</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-orange-300 font-mono">3D Rendering</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">UI Visuals</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <h3 class="font-display font-semibold text-white border-b border-slate-800 pb-2">Marketing & Systems</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-rose-300 font-mono">Digital Marketing</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-rose-300 font-mono">SEO & Inbound</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-emerald-300 font-mono">Network Monitoring</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Router & WISP</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 text-xs text-slate-200 font-mono">Hardware Repair</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-800/70">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-wider text-emerald-400">05 // Featured Portfolio</span>
+        <h2 class="font-display text-3xl font-bold text-white mt-1">Systems & Projects Built</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2" id="project-filters">
+        <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono bg-emerald-500 text-slate-950 font-semibold transition">All Work (9)</button>
+        <button data-filter="ai" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-800 text-slate-300 hover:text-white transition">AI & Python</button>
+        <button data-filter="systems" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-800 text-slate-300 hover:text-white transition">Enterprise & Net</button>
+        <button data-filter="design" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-800 text-slate-300 hover:text-white transition">Canva & Blender</button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+      <!-- Project 1: MedicalAI System -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="ai">
+        <div class="h-44 bg-gradient-to-br from-emerald-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs">Healthcare AI</span>
+          <h3 class="font-display text-xl font-bold text-white">MedicalAI Diagnostic & Triage System</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            AI-assisted clinical decision support system analyzing patient symptoms and medical metrics to provide structured diagnostic insights and risk triage.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Machine Learning</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Healthcare Data</span>
+            </div>
+            <button onclick="openModal('medicalai')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-emerald-400 text-xs font-mono text-emerald-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Automatic Network Monitoring System -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="systems">
+        <div class="h-44 bg-gradient-to-br from-cyan-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 font-mono text-xs">NetOps & Automation</span>
+          <h3 class="font-display text-xl font-bold text-white">Automatic Network Monitoring System</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Real-time network health monitor that continuously tracks connected hosts, measures latency/packet loss, and triggers instant alerts upon downtime.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">ICMP / Sockets</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Live Telemetry</span>
+            </div>
+            <button onclick="openModal('netmon')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-cyan-400 text-xs font-mono text-cyan-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Hospital Assets & Electronic Inventory System -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="systems">
+        <div class="h-44 bg-gradient-to-br from-teal-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-teal-500/20 text-teal-300 font-mono text-xs">HealthTech & RDBMS</span>
+          <h3 class="font-display text-xl font-bold text-white">Hospital Assets & Electronic Inventory System</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Centralized tracking platform for medical equipment, electronic hardware, departmental allocation, maintenance schedules, and stock auditing.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Full-Stack</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">MySQL / MariaDB</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Asset Lifecycle</span>
+            </div>
+            <button onclick="openModal('hospital')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-teal-400 text-xs font-mono text-teal-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Computer Motion Awareness System -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="ai">
+        <div class="h-44 bg-gradient-to-br from-purple-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 font-mono text-xs">Computer Vision</span>
+          <h3 class="font-display text-xl font-bold text-white">Computer Motion Awareness System</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Real-time webcam vision system utilizing frame differencing and contour analysis to detect physical movement, log events, and trigger security alerts.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">OpenCV</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Motion Detection</span>
+            </div>
+            <button onclick="openModal('motion')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-purple-400 text-xs font-mono text-purple-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: EPL Real-Time Polling -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="systems">
+        <div class="h-44 bg-gradient-to-br from-blue-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 font-mono text-xs">Full-Stack + FinTech</span>
+          <h3 class="font-display text-xl font-bold text-white">EPL Real-Time Polling & M-PESA Platform</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Live English Premier League matchday voting web app featuring instant Socket.io vote updates, MariaDB persistence, and automated M-PESA payment flows.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Node.js</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Socket.io</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">M-PESA API</span>
+            </div>
+            <button onclick="openModal('epl')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-blue-400 text-xs font-mono text-blue-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6: Predictive Sales Analytics -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="ai">
+        <div class="h-44 bg-gradient-to-br from-sky-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 font-mono text-xs">Big Data Analytics</span>
+          <h3 class="font-display text-xl font-bold text-white">E-Commerce Predictive Sales Analytics</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Python data pipeline analyzing historical retail transactions to forecast sales trends, seasonal demand spikes, and customer purchasing behavior.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Pandas</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Seaborn</span>
+            </div>
+            <button onclick="openModal('sales')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-sky-400 text-xs font-mono text-sky-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 7: Spring Boot Bookstore -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="systems">
+        <div class="h-44 bg-gradient-to-br from-indigo-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono text-xs">Enterprise Java</span>
+          <h3 class="font-display text-xl font-bold text-white">Spring Boot Bookstore CRUD System</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Single-page inventory and catalog management web application built with Java Spring Boot, Thymeleaf templates, Spring Data JPA, and MariaDB.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Java</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Spring Boot</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">MariaDB</span>
+            </div>
+            <button onclick="openModal('bookstore')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-indigo-400 text-xs font-mono text-indigo-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 8: Blender 3D -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="design">
+        <div class="h-44 bg-gradient-to-br from-orange-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-orange-500/20 text-orange-300 font-mono text-xs">3D Modeling</span>
+          <h3 class="font-display text-xl font-bold text-white">Blender 3D Models & Product Renders</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Custom 3D geometric assets, studio lighting setups, procedural materials, and high-resolution product renders modeled in Blender.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Blender 3D</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">3D Modeling</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Rendering</span>
+            </div>
+            <button onclick="openModal('blender')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-orange-400 text-xs font-mono text-orange-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 9: Canva Brand & Marketing Suite -->
+      <article class="project-card glass-card rounded-2xl overflow-hidden flex flex-col" data-category="design">
+        <div class="h-44 bg-gradient-to-br from-amber-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800">
+          <span class="self-start px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 font-mono text-xs">Canva & Digital Brand</span>
+          <h3 class="font-display text-xl font-bold text-white">Canva Brand Identity & Marketing Creatives</h3>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Visual brand systems, logos, social media campaign creatives, and promotional graphics designed in Canva to drive audience engagement.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Canva</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Logo Design</span>
+              <span class="px-2 py-0.5 bg-slate-800 rounded">Campaign Visuals</span>
+            </div>
+            <button onclick="openModal('design')" class="w-full py-2 rounded-lg border border-slate-700 hover:border-amber-400 text-xs font-mono text-amber-400 transition">
+              View Case Study →
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-slate-800/70">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-wider text-emerald-400">06 // Hire & Connect</span>
+          <h2 class="font-display text-3xl font-bold text-white mt-1">Let's Build Together</h2>
+          <p class="text-slate-400 mt-2">
+            Looking for a reliable freelancer in Python, AI systems, inventory/network software, digital marketing, Canva design, or Blender 3D? Get in touch.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <!-- Email Card -->
+          <div class="glass-card p-4 rounded-xl flex items-center justify-between">
+            <div>
+              <p class="text-xs font-mono text-slate-400">Email Address</p>
+              <a href="mailto:kevinoeba02@gmail.com" id="email-text" class="text-sm font-medium text-white hover:text-emerald-400 transition">kevinoeba02@gmail.com</a>
+            </div>
+            <button onclick="copyEmail()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-xs font-mono text-emerald-400 transition">
+              Copy
+            </button>
+          </div>
+
+          <!-- Phone Call & Copy Card -->
+          <div class="glass-card p-4 rounded-xl flex items-center justify-between">
+            <div>
+              <p class="text-xs font-mono text-slate-400">Working Phone No.</p>
+              <p id="phone-text" class="text-sm font-medium text-white">+254 720 021 549</p>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="copyPhone()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-xs font-mono text-cyan-400 transition">
+                Copy
+              </button>
+              <a href="tel:+254720021549" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition flex items-center">
+                Call
+              </a>
+            </div>
+          </div>
+
+          <!-- WhatsApp Chat Card -->
+          <a href="https://wa.me/254720021549" target="_blank" class="glass-card p-4 rounded-xl flex items-center justify-between hover:border-emerald-500/50 transition block">
+            <div>
+              <p class="text-xs font-mono text-slate-400">WhatsApp Chat</p>
+              <p class="text-sm font-medium text-white">Direct Message on WhatsApp</p>
+            </div>
+            <span class="text-emerald-400 font-mono text-xs">Chat →</span>
+          </a>
+
+          <div class="grid grid-cols-2 gap-3">
+            <a href="https://github.com" target="_blank" class="glass-card p-4 rounded-xl text-center hover:border-emerald-500/50 transition">
+              <p class="font-mono text-sm font-semibold text-white">GitHub</p>
+              <p class="text-xs text-slate-400 mt-0.5">@vohkemasi</p>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="glass-card p-4 rounded-xl text-center hover:border-cyan-500/50 transition">
+              <p class="font-mono text-sm font-semibold text-white">LinkedIn</p>
+              <p class="text-xs text-slate-400 mt-0.5">Kevin Masita Oeba</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Message Form -->
+      <div class="lg:col-span-7">
+        <form id="contact-form" class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+          <h3 class="font-display text-xl font-bold text-white">Start a Freelance Project or Inquiry</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5">Your Name / Company</label>
+              <input type="text" required placeholder="Alex Morgan" class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-emerald-400 focus:outline-none text-sm text-white" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1.5">Your Email</label>
+              <input type="email" required placeholder="alex@company.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-emerald-400 focus:outline-none text-sm text-white" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-1.5">Service Required</label>
+            <select class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-emerald-400 focus:outline-none text-sm text-white">
+              <option>Python Development / Automation / Computer Vision</option>
+              <option>Custom Software / Inventory / Network System</option>
+              <option>Data Analytics & Visualization</option>
+              <option>Digital Marketing & SEO Campaign</option>
+              <option>AI Prompt Engineering & LLM Workflows</option>
+              <option>Canva Graphic Design / Brand Identity</option>
+              <option>Blender 3D Modeling & Rendering</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-1.5">Project Scope & Timeline</label>
+            <textarea rows="4" required placeholder="Describe your project goals, deliverables, and timeline..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 focus:border-emerald-400 focus:outline-none text-sm text-white"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm transition">
+            Send Project Inquiry
+          </button>
+          <p id="form-feedback" class="hidden text-center text-xs font-mono text-emerald-400 pt-1">
+            Inquiry ready! Connect Formspree in the next step so client messages arrive straight in your inbox.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 px-4 text-center text-xs font-mono text-slate-500">
+    <p>© 2026 Kevin Masita Oeba (vohkemasi) • Computer Science, AI & Digital Solutions • Kisii, Kenya.</p>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="glass-card max-w-lg w-full rounded-2xl p-6 sm:p-8 space-y-4 relative border border-slate-700">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white font-mono text-sm">✕</button>
+      <span id="modal-tag" class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs">Category</span>
+      <h3 id="modal-title" class="font-display text-2xl font-bold text-white">Project Title</h3>
+      <p id="modal-desc" class="text-sm text-slate-300 leading-relaxed"></p>
+      <div class="pt-2">
+        <p class="text-xs font-mono text-slate-400 mb-2">Key Technical & Business Highlights:</p>
+        <ul id="modal-points" class="text-sm text-slate-300 space-y-1.5 list-disc list-inside"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Project Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-emerald-500', 'text-slate-950', 'font-semibold');
+          b.classList.add('bg-slate-800', 'text-slate-300');
+        });
+        btn.classList.add('bg-emerald-500', 'text-slate-950', 'font-semibold');
+        btn.classList.remove('bg-slate-800', 'text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Case Study Modal Data
+    const projectDetails = {
+      medicalai: {
+        tag: 'Healthcare AI System',
+        title: 'MedicalAI Diagnostic & Triage System',
+        desc: 'An intelligent healthcare analytics and diagnostic assistance system designed to evaluate patient symptoms, vital indicators, and historical patterns.',
+        points: [
+          'Built using Python data science and machine learning libraries for structured symptom evaluation.',
+          'Provides clear clinical decision-support summaries and priority triage flags.',
+          'Designed with clean data pipelines for reliable medical record preprocessing.'
+        ]
+      },
+      netmon: {
+        tag: 'Automated Network Operations',
+        title: 'Automatic Network Monitoring System',
+        desc: 'An automated infrastructure monitoring tool engineered to continuously poll network nodes, track uptime, and detect latency spikes or outages.',
+        points: [
+          'Automates periodic ping/socket health checks across routers, servers, and endpoints.',
+          'Logs uptime metrics, response times, and packet loss events in real time.',
+          'Triggers immediate alerts when critical devices drop offline.'
+        ]
+      },
+      hospital: {
+        tag: 'Healthcare Asset & Inventory Management',
+        title: 'Hospital Assets & Electronic Inventory System',
+        desc: 'A comprehensive asset tracking and electronic inventory platform tailored for medical facilities to manage devices, consumables, and maintenance.',
+        points: [
+          'Tracks equipment serial numbers, department assignments, and operational status.',
+          'Monitors electronic stock levels and schedules preventive maintenance alerts.',
+          'Backed by a normalized relational database for full audit traceability.'
+        ]
+      },
+      motion: {
+        tag: 'Computer Vision & Security',
+        title: 'Computer Motion Awareness System',
+        desc: 'A real-time computer vision application that transforms standard camera feeds into an intelligent motion-aware security and activity monitor.',
+        points: [
+          'Developed in Python using OpenCV frame-differencing and contour detection algorithms.',
+          'Filters background noise to accurately isolate human/object movement.',
+          'Captures timestamped motion events and triggers automated notifications.'
+        ]
+      },
+      epl: {
+        tag: 'Full-Stack + FinTech',
+        title: 'EPL Real-Time Polling & M-PESA Platform',
+        desc: 'A live matchday fan engagement web app allowing users to cast real-time predictions and see instant tally updates across connected clients.',
+        points: [
+          'Built with Node.js, Express, and Socket.io for low-latency live vote broadcasting.',
+          'Integrated automated M-PESA STK Push payment verification.',
+          'Structured MariaDB tables to prevent duplicate votes and audit transactions.'
+        ]
+      },
+      sales: {
+        tag: 'Big Data Analytics',
+        title: 'E-Commerce Predictive Sales Analytics',
+        desc: 'Python analytics workflow designed to uncover revenue drivers, seasonal peaks, and customer retention trends from raw e-commerce logs.',
+        points: [
+          'Cleaned and transformed multi-thousand row datasets using Python & Pandas.',
+          'Generated clear executive trend charts with Matplotlib and Seaborn.',
+          'Identified top-performing product categories and peak order windows.'
+        ]
+      },
+      bookstore: {
+        tag: 'Enterprise Java Web',
+        title: 'Spring Boot Bookstore CRUD System',
+        desc: 'A streamlined single-page catalog and inventory management system engineered for fast book lookups, stock updates, and clean server-side rendering.',
+        points: [
+          'Developed using Java, Spring Boot, Spring Data JPA, and Thymeleaf.',
+          'Backed by a relational MariaDB database with full CRUD operations.',
+          'Clean, responsive user interface for effortless catalog administration.'
+        ]
+      },
+      blender: {
+        tag: '3D Modeling & Visualization',
+        title: 'Blender 3D Models & Product Renders',
+        desc: '3D digital assets and scene compositions created in Blender to showcase spatial modeling, texturing, and studio lighting skills.',
+        points: [
+          'Modeled clean mesh geometry and custom surface shaders.',
+          'Configured realistic camera angles and three-point lighting setups.',
+          'Rendered high-resolution visual assets for digital branding.'
+        ]
+      },
+      design: {
+        tag: 'Canva Graphic Design & Branding',
+        title: 'Canva Brand Identity & Marketing Creatives',
+        desc: 'Visual identity and marketing design portfolio combining Canva visual aesthetics with HubSpot-certified digital marketing principles.',
+        points: [
+          'Created custom brand logos, social media campaign graphics, and promotional banners.',
+          'Aligned visual layouts with conversion-focused marketing messaging.',
+          'Delivered cohesive brand kits for digital and print distribution.'
+        ]
+      }
+    };
+
+    function openModal(key) {
+      const data = projectDetails[key];
+      document.getElementById('modal-tag').textContent = data.tag;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-desc').textContent = data.desc;
+      const list = document.getElementById('modal-points');
+      list.innerHTML = data.points.map(pt => `<li>${pt}</li>`).join('');
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Copy Helpers
+    function copyEmail() {
+      const email = document.getElementById('email-text').textContent;
+      navigator.clipboard.writeText(email);
+      alert('Email copied to clipboard: ' + email);
+    }
+
+    function copyPhone() {
+      const phone = document.getElementById('phone-text').textContent;
+      navigator.clipboard.writeText(phone);
+      alert('Phone number copied to clipboard: ' + phone);
+    }
+
+    // Contact Form Handler
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-feedback').classList.remove('hidden');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
