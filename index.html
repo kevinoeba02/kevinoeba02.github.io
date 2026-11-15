@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -28,67 +29,51 @@
 </head>
 <body class="bg-darkBg text-slate-100 antialiased selection:bg-accentGreen selection:text-slate-950 font-sans">
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-mono text-xl font-bold tracking-wider text-accentGreen">vohkemasi<span class="text-white">.dev</span></a>
+    <!-- Navigation Header: Profile Picture Top Left & Dashboard 3-Dots Top Right -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- Top Left: Profile Picture Avatar + Brand -->
+            <div class="flex items-center space-x-3">
+                <div id="header-avatar-container" class="w-10 h-10 rounded-full bg-accentGreen/10 border border-accentGreen/40 flex items-center justify-center overflow-hidden shadow-inner cursor-pointer" onclick="toggleAdminLogin()" title="Click to Login Admin">
+                    <img id="header-img-tag" src="" alt="Avatar" class="w-full h-full object-cover hidden">
+                    <span id="header-initials" class="font-mono text-xs font-bold text-accentGreen">KM</span>
+                </div>
+                <a href="#" class="font-mono text-lg font-bold tracking-wider text-accentGreen">vohkemasi<span class="text-white">.dev</span></a>
+            </div>
+
+            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-accentGreen transition">About</a>
                 <a href="#education" class="hover:text-accentGreen transition">Education</a>
                 <a href="#skills" class="hover:text-accentGreen transition">Skills</a>
                 <a href="#projects" class="hover:text-accentGreen transition">Projects</a>
                 <a href="#contact" class="hover:text-accentGreen transition">Contact</a>
-                <button onclick="toggleAdminLogin()" class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-800 text-accentGreen border border-emerald-500/30 hover:bg-slate-700 transition">🔒 Admin Portal</button>
             </nav>
-            <div class="flex items-center space-x-3">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-accentGreen border border-emerald-500/20">
-                    <span class="w-2 h-2 mr-2 bg-accentGreen rounded-full animate-pulse"></span> Portfolio Live
-                </span>
+
+            <!-- Top Right: Dashboard Three Dots (⋮) Menu -->
+            <div class="relative">
+                <button onclick="toggleDashboardMenu()" class="p-2 text-slate-300 hover:text-accentGreen rounded-lg bg-slate-900 border border-slate-800 focus:outline-none transition" title="Dashboard Menu">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                </button>
+                <!-- Dropdown Menu -->
+                <div id="dashboard-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-cardBg border border-slate-800 rounded-xl shadow-2xl py-2 z-50 font-mono text-xs">
+                    <a href="#about" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-accentGreen">🏠 Home / About</a>
+                    <a href="#education" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-accentGreen">🎓 Education</a>
+                    <a href="#skills" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-accentGreen">⚡ Skills Matrix</a>
+                    <a href="#projects" class="block px-4 py-2 text-slate-300 hover:bg-slate-800 hover:text-accentGreen">🚀 Projects</a>
+                    <div class="border-t border-slate-800 my-1"></div>
+                    <button onclick="toggleAdminLogin()" class="w-full text-left px-4 py-2 text-accentGreen hover:bg-slate-800 font-bold flex items-center justify-between">
+                        <span>⚙️ Chief Admin</span> 🔒
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="about" class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:py-32 flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-2/3 space-y-6">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-slate-800/60 border border-slate-700 text-xs font-mono text-slate-300">
-                <span>System Role:</span>
-                <span class="text-accentGreen font-bold">Chief Administrator & Software Developer</span>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
-                Hi, I'm <span class="text-accentGreen">Kevin Masita Oeba</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl">
-                Computer Science student specializing in Big Data Analytics at Kisii University. Independent software engineer and technical specialist crafting robust backend systems, databases, and high-performance applications under the <span class="text-white font-mono">vohkemasi</span> brand.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-4">
-                <a href="#projects" class="px-6 py-3 rounded-lg bg-accentGreen text-slate-950 font-semibold hover:bg-emerald-400 transition shadow-lg shadow-emerald-900/20">
-                    Explore Projects
-                </a>
-                <button onclick="toggleAdminLogin()" class="px-6 py-3 rounded-lg bg-slate-800 text-accentGreen font-semibold border border-emerald-500/30 hover:bg-slate-700 transition">
-                    🔒 Chief Admin Login
-                </button>
-            </div>
-        </div>
-        <div class="mt-12 md:mt-0 md:w-1/3 flex justify-center">
-            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 p-1 border border-slate-800 shadow-2xl">
-                <div class="w-full h-full bg-cardBg rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
-                    <div id="profile-avatar-container" class="w-24 h-24 rounded-full bg-accentGreen/10 flex items-center text-accentGreen justify-center font-mono text-2xl font-bold border-2 border-accentGreen/40 overflow-hidden shadow-inner">
-                        <img id="profile-img-tag" src="" alt="Profile Avatar" class="w-full h-full object-cover hidden">
-                        <span id="profile-initials">KM</span>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg text-white">Kevin Masita Oeba</h3>
-                        <p class="text-xs font-mono text-accentGreen mt-1">@vohkemasi</p>
-                    </div>
-                    <span class="text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">Kisii, Kenya</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECURE CHIEF ADMINISTRATOR LIVE CONTROL PANEL (Hidden by Default) -->
-    <section id="admin-panel" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80 hidden">
+    <!-- SECURE CHIEF ADMINISTRATOR PANEL (Appears right below dashboard/header when unlocked) -->
+    <section id="admin-panel" class="max-w-6xl mx-auto px-6 pt-10 hidden">
         <div class="bg-cardBg rounded-2xl p-8 border-2 border-accentGreen/40 relative overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 w-96 h-96 bg-accentGreen/10 rounded-full blur-3xl pointer-events-none"></div>
             
@@ -99,17 +84,17 @@
                     </div>
                     <div>
                         <h2 class="text-2xl font-bold text-white">Chief Administrator Control Panel</h2>
-                        <p class="text-xs font-mono text-accentGreen">Secure Session Active. Make live updates below.</p>
+                        <p class="text-xs font-mono text-accentGreen">Secure Session Active. Live updates sync instantly.</p>
                     </div>
                 </div>
                 <button onclick="lockAdminPanel()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-mono rounded-lg transition">🔒 Lock Admin</button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                <!-- 1. Update Profile Picture with Camera & Gallery Options -->
+                <!-- 1. Update Profile Avatar with Camera & Gallery -->
                 <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4">
                     <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">1. Update Profile Avatar</h3>
-                    <p class="text-xs text-slate-400">Take a photo using your camera or choose an existing picture from your device gallery.</p>
+                    <p class="text-xs text-slate-400">Take a photo using your camera or pick from your device gallery.</p>
                     
                     <input type="file" id="profile-file-input" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
                     
@@ -142,14 +127,53 @@
                     <h3 class="font-mono text-sm font-bold text-accentGreen uppercase tracking-wider">3. Add Incoming Project</h3>
                     <p class="text-xs text-slate-400">Publish a new upcoming project or architecture build.</p>
                     <input type="text" id="admin-proj-title" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Project Title">
-                    <input type="text" id="admin-proj-tech" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Tech Stack (e.g. Node.js)">
+                    <input type="text" id="admin-proj-tech" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Tech Stack">
                     <textarea id="admin-proj-desc" rows="2" class="w-full bg-darkBg border border-slate-700 rounded-lg px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-accentGreen" placeholder="Short description..."></textarea>
                     <button onclick="addIncomingProject()" class="w-full py-2 bg-accentGreen text-slate-950 font-bold text-xs rounded-lg hover:bg-emerald-400 transition">Publish Project</button>
                 </div>
             </div>
             <div class="mt-6 flex justify-between items-center text-xs font-mono text-slate-500 border-t border-slate-800 pt-4">
-                <span>Storage: Browser LocalStorage (Persists across reloads)</span>
+                <span>Storage: Browser LocalStorage</span>
                 <button onclick="resetAdminData()" class="text-red-400 hover:underline">Reset to Default State</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 pt-16 pb-16 md:py-24 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-2/3 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-slate-800/60 border border-slate-700 text-xs font-mono text-slate-300">
+                <span>System Role:</span>
+                <span class="text-accentGreen font-bold">Chief Administrator & Software Developer</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+                Hi, I'm <span class="text-accentGreen">Kevin Masita Oeba</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl">
+                Computer Science student specializing in Big Data Analytics at Kisii University. Independent software engineer and technical specialist crafting robust backend systems, databases, and high-performance applications under the <span class="text-white font-mono">vohkemasi</span> brand.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#projects" class="px-6 py-3 rounded-lg bg-accentGreen text-slate-950 font-semibold hover:bg-emerald-400 transition shadow-lg shadow-emerald-900/20">
+                    Explore Projects
+                </a>
+                <button onclick="toggleAdminLogin()" class="px-6 py-3 rounded-lg bg-slate-800 text-accentGreen font-semibold border border-emerald-500/30 hover:bg-slate-700 transition">
+                    🔒 Chief Admin Login
+                </button>
+            </div>
+        </div>
+        <div class="mt-12 md:mt-0 md:w-1/3 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 p-1 border border-slate-800 shadow-2xl">
+                <div class="w-full h-full bg-cardBg rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+                    <div class="w-24 h-24 rounded-full bg-accentGreen/10 flex items-center text-accentGreen justify-center font-mono text-2xl font-bold border-2 border-accentGreen/40 overflow-hidden shadow-inner">
+                        <img class="profile-img-tag w-full h-full object-cover hidden" src="" alt="Avatar">
+                        <span class="profile-initials">KM</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Kevin Masita Oeba</h3>
+                        <p class="text-xs font-mono text-accentGreen mt-1">@vohkemasi</p>
+                    </div>
+                    <span class="text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded border border-slate-800">Kisii, Kenya</span>
+                </div>
             </div>
         </div>
     </section>
@@ -174,18 +198,12 @@
         </div>
     </section>
 
-    <!-- Technical Skills Matrix Section (Dynamic via JS) -->
+    <!-- Technical Skills Matrix Section -->
     <section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800/80">
-        <div class="flex justify-between items-end mb-10">
-            <div>
-                <h2 class="text-3xl font-bold text-white mb-2">Technical Skills & Expertise</h2>
-                <p class="text-slate-400">Complete skill set including languages, frameworks, databases, and engineering tools.</p>
-            </div>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-2">Technical Skills & Expertise</h2>
+        <p class="text-slate-400 mb-10">Complete skill set including languages, frameworks, databases, and engineering tools.</p>
         
-        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Dynamically populated by JS -->
-        </div>
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
     </section>
 
     <!-- Projects Section -->
@@ -194,40 +212,32 @@
         <p class="text-slate-400 mb-10">Completed systems and incoming architectures built under the vohkemasi brand.</p>
         
         <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1: Bookstore CRUD -->
             <div class="bg-cardBg rounded-xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white">Spring Boot Bookstore CRUD</h3>
                         <span class="text-xs font-mono px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Java / Spring</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6">
-                        Single-page Spring Boot bookstore application utilizing Thymeleaf templates, Spring Data JPA, and MariaDB integration for robust inventory management.
-                    </p>
+                    <p class="text-slate-400 text-sm mb-6">Single-page Spring Boot bookstore application utilizing Thymeleaf templates, Spring Data JPA, and MariaDB integration for robust inventory management.</p>
                 </div>
                 <div class="flex items-center space-x-2 text-xs font-mono text-slate-500">
                     <span>Spring Boot</span><span>•</span><span>Thymeleaf</span><span>•</span><span>MariaDB</span>
                 </div>
             </div>
 
-            <!-- Project 2: Predictive Sales -->
             <div class="bg-cardBg rounded-xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white">E-Commerce Predictive Sales Analytics</h3>
                         <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Python Data Science</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6">
-                        Advanced data science pipeline utilizing Python data science libraries (Pandas, Matplotlib, Seaborn) to forecast sales trends and customer behavior patterns.
-                    </p>
+                    <p class="text-slate-400 text-sm mb-6">Advanced data science pipeline utilizing Python data science libraries (Pandas, Matplotlib, Seaborn) to forecast sales trends and customer behavior patterns.</p>
                 </div>
                 <div class="flex items-center space-x-2 text-xs font-mono text-slate-500">
                     <span>Python</span><span>•</span><span>Pandas</span><span>•</span><span>Seaborn</span>
                 </div>
             </div>
         </div>
-
-        <!-- Container for dynamically added incoming projects -->
         <div id="dynamic-projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"></div>
     </section>
 
@@ -237,9 +247,7 @@
             <h2 class="text-2xl font-bold text-white mb-2 text-center">Direct Contact & Inquiries</h2>
             <p class="text-slate-400 text-sm text-center mb-8">Reach out directly to Chief Administrator Kevin Masita Oeba via call, WhatsApp, email, or the inquiry form.</p>
             
-            <!-- Direct Phone, WhatsApp & Email Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <!-- Phone Card -->
                 <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <span class="text-xs font-mono text-slate-500 block">PHONE CALL</span>
@@ -248,7 +256,6 @@
                     <a href="tel:0720021549" class="mt-3 text-center py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Call Now</a>
                 </div>
 
-                <!-- Email Card -->
                 <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <span class="text-xs font-mono text-slate-500 block">OFFICIAL EMAIL</span>
@@ -257,17 +264,15 @@
                     <button type="button" onclick="copyEmail()" class="mt-3 py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Copy Email</button>
                 </div>
 
-                <!-- WhatsApp Card -->
                 <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <span class="text-xs font-mono text-slate-500 block">WHATSAPP CHAT</span>
-                        <a id="phone-text" href="https://wa.me/254720021549" target="_blank" class="text-sm font-mono text-accentGreen hover:underline font-bold">+254 720 021 549</a>
+                        <a href="https://wa.me/254720021549" target="_blank" class="text-sm font-mono text-accentGreen hover:underline font-bold">+254 720 021 549</a>
                     </div>
                     <a href="https://wa.me/254720021549" target="_blank" class="mt-3 text-center py-1.5 text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition">Open Chat</a>
                 </div>
             </div>
 
-            <!-- Inquiry Form -->
             <form id="contact-form" class="space-y-6 border-t border-slate-800/80 pt-8">
                 <div>
                     <label class="block text-xs font-mono text-slate-400 mb-2">YOUR NAME</label>
@@ -297,19 +302,33 @@
         <p>© 2026 Kevin Masita Oeba (vohkemasi). All Rights Reserved. Chief Administrator.</p>
     </footer>
 
-    <!-- JavaScript for Secure Admin Access & Functionality -->
+    <!-- JavaScript Handling -->
     <script>
-        // Default PIN for Chief Administrator (You can change "2026" to any PIN you prefer)
         const ADMIN_PIN = "2026";
 
+        function toggleDashboardMenu() {
+            const dropdown = document.getElementById('dashboard-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('dashboard-dropdown');
+            const btn = e.target.closest('button');
+            if (!btn && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
         function toggleAdminLogin() {
+            document.getElementById('dashboard-dropdown').classList.add('hidden');
             const enteredPin = prompt("Enter Chief Administrator Security PIN:");
             if (enteredPin === ADMIN_PIN) {
                 document.getElementById('admin-panel').classList.remove('hidden');
                 document.getElementById('admin-panel').scrollIntoView({ behavior: 'smooth' });
                 alert('Access Granted: Chief Administrator session active.');
             } else if (enteredPin !== null) {
-                alert('Access Denied: Incorrect Security PIN.');
+                alert('Access Denied: Incorrect PIN.');
             }
         }
 
@@ -319,7 +338,6 @@
             alert('Admin panel locked and secured.');
         }
 
-        // Default Skills Dataset
         const defaultSkills = {
             "Languages": ["Java", "Python", "C & C++", "JavaScript (ES6+)", "HTML5 / CSS3"],
             "Backend & Web": ["Spring Boot", "Node.js & Express", "Thymeleaf Templates", "Tailwind CSS", "Maven & Build Tools"],
@@ -406,12 +424,23 @@
         }
 
         function applyProfilePic(url) {
-            const imgTag = document.getElementById('profile-img-tag');
-            const initials = document.getElementById('profile-initials');
+            // Update header avatar & hero avatar
+            const headerImg = document.getElementById('header-img-tag');
+            const headerInitials = document.getElementById('header-initials');
+            
+            const heroImgs = document.querySelectorAll('.profile-img-tag');
+            const heroInitials = document.querySelectorAll('.profile-initials');
+
             if (url) {
-                imgTag.src = url;
-                imgTag.classList.remove('hidden');
-                initials.classList.add('hidden');
+                headerImg.src = url;
+                headerImg.classList.remove('hidden');
+                headerInitials.classList.add('hidden');
+
+                heroImgs.forEach(img => {
+                    img.src = url;
+                    img.classList.remove('hidden');
+                });
+                heroInitials.forEach(init => init.classList.add('hidden'));
             }
         }
 
@@ -466,7 +495,7 @@
         }
 
         function resetAdminData() {
-            if (confirm('Are you sure you want to reset all customized skills, projects, and avatar to default?')) {
+            if (confirm('Reset customized avatar, skills, and projects to default?')) {
                 localStorage.removeItem('vohkemasi_skills');
                 localStorage.removeItem('vohkemasi_projects');
                 localStorage.removeItem('vohkemasi_avatar');
